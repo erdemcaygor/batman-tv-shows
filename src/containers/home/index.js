@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import { setMovieList } from '../../modules/actions/movieActions';
 import { movieService } from '../../services';
-import { MovieItem, SearchBox } from '../../components';
+import { MovieItem } from '../../components';
 
 class Home extends Component {
 

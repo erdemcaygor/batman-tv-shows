@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
     "bootstrap": "^4.3.1",
     "connected-react-router": "^6.4.0",
+    "express": "^4.16.4",
+    "fetch-everywhere": "^1.0.5",
     "history": "^4.9.0",
+    "ignore-styles": "^5.0.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -20,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:ssr": "BUILD_TYPE=SSR npm run build && node server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"

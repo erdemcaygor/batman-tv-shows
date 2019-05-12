@@ -9,6 +9,7 @@ import './styles/main.scss';
 
 import Home from './containers/home';
 import Base from './containers/base';
+import ShowDetail from './containers/show-detail';
 
 const store = configureStore()
 
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" render={() => (<div>Miss</div>)} />
+          <Route path="/show-detail/:id" component={ShowDetail}/>
         </Switch>
       </Base>
     </ConnectedRouter>

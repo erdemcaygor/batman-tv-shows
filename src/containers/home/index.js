@@ -27,13 +27,12 @@ class Home extends Component {
   render() {
     const movies = this.props.movies;
     const { pending } = this.state;
-    console.log(movies);
     return (
       <div className="py-4">
-        <div className="col-12 col-sm-8 offset-sm-2">
-          <SearchBox/>
+        <div className="col-12 pl-4">
+          <h4>Batman Tv Shows:</h4>
         </div>
-        <div className="col-12 col-sm-8 offset-sm-2">
+        <div className="col-12 flex-row d-flex flex-wrap">
           {pending &&
             <div className="text-center">
               <div class="spinner-border text-info" role="status">
@@ -42,7 +41,7 @@ class Home extends Component {
             </div>
           }
           {movies.list.map((movie, index) => (
-            <div className="py-2" key={index}>
+            <div className="py-2 col-12 col-sm-6 col-md-3" key={index}>
               <MovieItem movie={movie} />
             </div>
           ))
